@@ -1,0 +1,10 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3761
+
+I often need to review others code to get a quick idea if the developers are doing the proper job.  It's tedious when going through hundreds of files manually.  I finally came up with this script, which you need to find/grep the interested files, and feed them to vim.
+
+For example to review author Cary's source files:
+
+In command line,
+vim +"so ~/.vim/SlideShow.vim" `grep -liR "Cary" * | grep -v .svn | grep ".java" | sort`
+
+In vim, press <Space> to start the slide show.
